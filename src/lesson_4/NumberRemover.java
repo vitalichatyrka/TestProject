@@ -7,7 +7,7 @@ public class NumberRemover {
         welcomeMessage();
         int [] initialArray = initializationOfArray(getRandomInt());
         searchAndRemove(getNumber(),initialArray);
-        System.out.println("Changed array:");
+        System.out.println("Initial array:");
         printArray(initialArray);
 
     }
@@ -26,7 +26,6 @@ public class NumberRemover {
     }
     public static void welcomeMessage () {
             System.out.println("Welcome to this app that allows to find you number in the array and delete it");
-            System.out.print("Please enter the number what you want to remove from the array: ");
         }
         public static int getRandomInt (){
             Random random = new Random();
@@ -36,11 +35,25 @@ public class NumberRemover {
             int countChangedEllements = 0;
             for (int index = 0;index < array.length; index++) {
                 if (array[index] == number) {
-                    array[index] = 0;
                     countChangedEllements++;
                 }
             }
-            System.out.println("Were removed " + countChangedEllements + " ellements");
+            if(countChangedEllements > 0) {
+                System.out.println("Were removed " + countChangedEllements + " ellements");
+                int [] newArray = new int[array.length - countChangedEllements];
+                int index = 0;
+                for (int el: array){
+                    if(el!=number){
+                        newArray[index++] = el;
+                    }
+                }
+                System.out.println("Changed array:");
+                printArray(newArray);
+
+            }
+            else {
+                System.out.println("The array doesn't contain your number");
+            }
         }
         public static void printArray(int [] someArray){
                 for(int el: someArray){

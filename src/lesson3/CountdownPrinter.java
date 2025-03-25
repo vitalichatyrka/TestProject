@@ -1,4 +1,4 @@
-package lesson_3;
+package lesson3;
 
 public class CountdownPrinter {
     public static void main(String[] args) {

@@ -1,6 +1,4 @@
-package lesson_5;
-
-import java.util.Scanner;
+package lesson5;
 
 public class ThreeDimensionalArray {
    private int[][][] array; // Сам массив

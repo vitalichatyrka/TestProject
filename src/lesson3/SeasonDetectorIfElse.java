@@ -1,4 +1,4 @@
-package lesson_3;
+package lesson3;
 import java.util.Scanner;
 public class SeasonDetectorIfElse {
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
-package lesson_4;
+package lesson4;
 import java.util.Scanner;
-import java.util.Random;
 
 public class  RandomArrayAnalyzer{
     public static void main(String[] args) {

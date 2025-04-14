@@ -144,4 +144,7 @@ public class GuessWord {
         System.out.print("Would you like to play again? (y/n): ");
         return input().nextLine().equalsIgnoreCase("y");
     }
+    public GuessWord() {
+        startGame();
+    }
 }
